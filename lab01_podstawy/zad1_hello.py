@@ -6,3 +6,6 @@
 # Uruchom:  python zad1_hello.py
 
 # TODO: Twój kod poniżej
+print("Hello, World!")
+
+
