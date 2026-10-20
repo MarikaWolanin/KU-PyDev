@@ -9,20 +9,25 @@
 
 # TODO: Twój kod poniżej
 liczbaA = float(input("Podaj pierwszą liczbę: "))
-operator = input("Podaj operator (+, -, *, /): ")
-liczbaB = float(input("Podaj drugą liczbę: "))
-if operator == "+":
-    wynik = liczbaA + liczbaB
-    print(f"{liczbaA} + {liczbaB} = {wynik}")
-elif operator == "-":
-    wynik = liczbaA - liczbaB
-    print(f"{liczbaA} - {liczbaB} = {wynik}")  
-elif operator == "*":
-    wynik = liczbaA * liczbaB
-    print(f"{liczbaA} * {liczbaB} = {wynik}")
-elif operator == "/":
-    if liczbaB == 0:
-        print("Nie można dzielić przez zero")
-    else:
-        wynik = liczbaA / liczbaB
-        print(f"{liczbaA} / {liczbaB} = {wynik}")
+operator = input("Podaj operator (+, -, *, /): ").strip()
+
+if operator not in ("+", "-", "*", "/"):
+    print("Nieznany operator")
+else:
+    liczbaB = float(input("Podaj drugą liczbę: "))
+    
+    if operator == "+":
+        wynik = liczbaA + liczbaB
+        print(f"{liczbaA} + {liczbaB} = {wynik}")
+    elif operator == "-":
+        wynik = liczbaA - liczbaB
+        print(f"{liczbaA} - {liczbaB} = {wynik}")
+    elif operator == "*":
+        wynik = liczbaA * liczbaB
+        print(f"{liczbaA} * {liczbaB} = {wynik}")
+    elif operator == "/":
+        if liczbaB == 0:
+            print("Nie można dzielić przez zero")
+        else:
+            wynik = liczbaA / liczbaB
+            print(f"{liczbaA} / {liczbaB} = {wynik}")
