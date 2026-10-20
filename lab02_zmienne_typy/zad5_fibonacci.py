@@ -9,3 +9,11 @@
 # Wskazówka: a, b = b, a + b
 
 # TODO: Twój kod poniżej
+n = int(input("Podaj liczbę wyrazów ciągu Fibonacciego: "))
+a, b = 0, 1 
+print(a, end=" ")
+for _ in range(n - 1):
+    print(b, end=" ")
+    a, b = b, a + b
+
+
